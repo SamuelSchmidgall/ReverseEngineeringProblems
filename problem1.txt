@@ -1,0 +1,16 @@
+<f>:
+   0:                   mov    r8,rdi   # r8 = argument1
+   3:                   push   rbx      # stack [rbx]
+   4:                   mov    rdi,rsi  # rdi = rsi
+   7:                   mov    rbx,rdx  # rbx = rdx
+   a:                   mov    rsi,r8   # rsi = r8 = argument1
+   d:                   xor    rdx,rdx  # rdx = 0
+
+begin:
+  10:                   lods   rax,QWORD PTR ds:[rsi]  # ??
+  12:                   div    rbx                     # ??
+  15:                   stos   QWORD PTR es:[rdi],rax  # ??
+  17:                   loop   begin                   # ??
+  19:                   pop    rbx                     # pop rbx (context?)
+  1a:                   mov    rax,rdx                 # load rdx -> rax
+  1d:                   ret                            # finish
